@@ -16,7 +16,7 @@ class PcapTestCase(unittest.TestCase):
     def test_pcap_errors(self):
         p = pcap.pcap('test.pcap')
         try:
-            print p.stats()
+            print(p.stats())
         except OSError:
             pass
         assert p.geterr() != '', 'pcap_geterr'
